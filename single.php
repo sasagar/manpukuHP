@@ -53,9 +53,11 @@
         <?php
                 endwhile;
             endif;
-            wp_reset_postdata();
             ?>
     </div>
 </section>
+
+
+<?php get_template_part('news-list-three'); ?>
 
 <?php get_footer(); ?>

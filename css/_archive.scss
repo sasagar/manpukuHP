@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+.archive {
+  .wp-pagenavi {
+    margin-top: 3rem;
+    text-align: center;
+    span {
+      border-radius: 10px;
+      border: solid 1px var(--orange);
+      margin: 2px 5px;
+    }
+    .pages {
+      background-color: var(--splyellow);
+      padding: 5px 10px;
+      border: none;
+    }
+    .current {
+      background-color: var(--orange);
+      color: var(--white);
+      font-weight: bold;
+    }
+  }
+}

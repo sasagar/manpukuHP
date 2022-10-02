@@ -1,0 +1,72 @@
+@use "variables" as *;
+
+.mnpk-post {
+  padding-top: 100px;
+  .post-header {
+    position: relative;
+    .titlebox {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      margin-bottom: 2rem;
+      transform: rotate(-2deg) translateY(-60px);
+      filter: drop-shadow(2px 2px 0 var(--black));
+      @include mq {
+        transform: rotate(-2deg) translateY(10px);
+      }
+
+      h1 {
+        background-color: var(--bluegreen);
+        padding: 10px 15px;
+        font-size: 1.5rem;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .timebox {
+        text-align: right;
+        transform: rotate(5deg) translateY(-10px);
+        @include mq {
+          transform: rotate(5deg) translateY(-40px);
+        }
+        time {
+          background-color: var(--orange);
+          color: var(--white);
+          padding: 5px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    figure {
+      margin: 0;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+  .tagbox {
+    padding-bottom: 5px;
+    margin-top: 1rem;
+    @include mq {
+      padding: 0 10px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        background-color: var(--lightgray);
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: returnRem(12);
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .content {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,76 @@
+@use "variables" as *;
+
+.page,
+.single {
+  article {
+    h2 {
+      display: inline-block;
+      background-color: var(--splyellow);
+      margin-bottom: 0.5rem;
+      padding: 5px 10px;
+      transform: rotate(2deg) translateY(1rem);
+      filter: drop-shadow(2px 2px 0 var(--black));
+    }
+
+    .content {
+      .wp-block-group {
+        margin-top: 2rem;
+      }
+      h3 {
+        background-color: var(--yellow);
+        padding: 1rem 2rem;
+        margin-bottom: 0;
+
+        & + .wp-block-group {
+          border: solid 1px var(--yellow);
+          padding: 1rem 1.5rem;
+          margin-top: 0;
+        }
+      }
+
+      h4 {
+        background-color: var(--green);
+        padding: 0.7rem 1.2rem;
+        margin-bottom: 0;
+        color: var(--white);
+        & + .wp-block-group {
+          border: solid 1px var(--green);
+          padding: 0.7rem 1rem;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .attention {
+      background-color: var(--attention-bg-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      color: var(--attention-accent);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Font Awesome 6 Free";
+        content: "\f06a";
+        width: 60px;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.page {
+  article {
+    .post-header {
+      .titlebox {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+}

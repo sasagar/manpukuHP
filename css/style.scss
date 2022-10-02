@@ -1,3 +1,14 @@
 @charset 'UTF-8';
 
-@import "header";
+@use "root";
+@use "global";
+@use "header";
+@use "footer";
+@use "frontpage";
+@use "news-list";
+@use "mnpk-post";
+@use "singular";
+@use "archive";
+@use "page404";
+@use "accordion";
+@use "quotetweet";

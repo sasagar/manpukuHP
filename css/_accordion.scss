@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+article {
+  .content {
+    .mnpk-accordion {
+      h3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--yellow);
+        padding: 1rem 2rem;
+        margin-bottom: 0;
+        &::after {
+          content: "\f078";
+          font-family: "Font Awesome 6 Free";
+          display: block;
+          margin-left: 2rem;
+          transition: transform 0.3s ease-in-out;
+        }
+        &.opened {
+          &::after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      & > .wp-block-group__inner-container {
+        & > .wp-block-group {
+          display: none;
+          border: solid 1px var(--yellow);
+          margin-top: 0;
+          padding: 1.5rem 2rem;
+        }
+      }
+    }
+  }
+}

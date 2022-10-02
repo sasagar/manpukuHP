@@ -1,0 +1,107 @@
+@use "variables" as *;
+
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 20px 0 0;
+  color: var(--white);
+
+  a {
+    color: var(--splyellow);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .sns {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--splyellow);
+      color: var(--footer-bg-color);
+      justify-content: center;
+      align-items: center;
+      font-size: returnRem(24);
+      transition: background 0.3s ease-in-out;
+    }
+
+    span {
+      color: var(--splyellow);
+      transition: color 0.3s ease-in-out;
+    }
+
+    @include mq {
+      &:hover {
+        .sns {
+          background-color: var(--orange);
+        }
+        span {
+          color: var(--orange);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin: 20px 0 0;
+    padding: 5px 20px calc(5px + env(safe-area-inset-bottom));
+    background-color: var(--copyright-bg-color);
+    color: var(--white);
+    text-align: center;
+  }
+}
+
+.home {
+  footer {
+    margin-top: 40px;
+  }
+}
+
+#page-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--splyellow);
+  border-radius: 50%;
+
+  span {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+
+    &::before {
+      content: url("../images/corner_squid.svg");
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+      animation: gototop-animation 2s infinite;
+    }
+  }
+}
+
+@keyframes gototop-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(7px) rotate(45deg);
+  }
+  25% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-3px) rotate(45deg);
+  }
+}

@@ -1,3 +1,4 @@
 {
-  "dartsass.outputFormat": "minified"
+  "dartsass.outputFormat": "minified",
+  "dartsass.sassBinPath": "/usr/local/bin/sass"
 }

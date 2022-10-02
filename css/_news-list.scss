@@ -1,0 +1,118 @@
+@use "variables" as *;
+
+.mnpk-news-list {
+  .news-container {
+    @include mq {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      color: var(--black);
+      @include mq {
+        // width: calc((100% - 40px) / 3);
+      }
+
+      & + a {
+        margin-top: 15px;
+        @include mq {
+          margin-top: 0;
+        }
+      }
+
+      article {
+        background-color: var(--white);
+        overflow: hidden;
+        border-radius: 5px;
+        border: solid 1px var(--orange);
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "image time"
+          "image title"
+          "image tags";
+        gap: 10px;
+        padding-right: 5px;
+
+        @include mq {
+          grid-template-columns: 1fr;
+          grid-template-rows: 200px auto 1fr auto;
+          grid-template-areas:
+            "image"
+            "time"
+            "title"
+            "tags";
+          padding-right: 0;
+          height: 100%;
+        }
+
+        .titlebox {
+          grid-area: title;
+          @include mq {
+            padding: 0 10px;
+          }
+          h3 {
+            margin: 0;
+          }
+        }
+
+        figure {
+          grid-area: image;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+          }
+        }
+
+        .timebox {
+          grid-area: time;
+          padding-top: 5px;
+          @include mq {
+            padding: 0 10px;
+          }
+        }
+
+        .tagbox {
+          grid-area: tags;
+          padding-bottom: 5px;
+          @include mq {
+            padding: 0 10px 10px;
+          }
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+              display: inline-block;
+              background-color: var(--lightgray);
+              padding: 5px 15px;
+              border-radius: 15px;
+              font-size: returnRem(12);
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+      @include mq {
+        &:hover {
+          article {
+            figure {
+              img {
+                transform: scale(1.2, 1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

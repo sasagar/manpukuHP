@@ -1,0 +1,142 @@
+@use "variables" as *;
+
+body {
+  font-family: "Roboto", "M PLUS 1p", sans-serif;
+  background-color: var(--white);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--orange);
+}
+
+main {
+  padding-top: 68px;
+
+  @include mq {
+    padding-top: 0;
+  }
+}
+
+.h2container {
+  text-align: center;
+  h2 {
+    background-color: var(--h2-bg-color);
+    display: inline-block;
+    padding: returnRem(5);
+    position: relative;
+    text-align: center;
+    transform: rotate(-3deg);
+    margin: 2rem auto;
+    &::before,
+    &::after {
+      display: block;
+      content: url("../images/corner_squid.svg");
+      background-color: var(--h2-bg-color);
+      width: calc(32px * 0.8);
+      height: calc(32px * 0.8);
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 1;
+    }
+    &::before {
+      transform: scale(0.8);
+      top: 2px;
+      left: 2px;
+    }
+    &::after {
+      transform: scale(0.8) rotate(180deg);
+      bottom: 2px;
+      right: 2px;
+    }
+    & > span {
+      display: inline-block;
+      width: auto;
+      min-width: 320px;
+      max-width: 800px;
+      padding: returnRem(5) calc(returnRem(5) + 32px);
+      border: solid 2px #000;
+      position: relative;
+      z-index: 0;
+      font-stretch: condensed;
+      box-sizing: border-box;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+a.decorated {
+  background-color: var(--splyellow);
+  display: block;
+  padding: returnRem(5);
+  position: relative;
+  text-align: center;
+  transform: rotate(2deg);
+  transition: transform 0.1s linear;
+  width: fit-content;
+  margin: 2rem auto;
+  filter: drop-shadow(0.2rem 0.2rem 0 var(--black));
+  text-decoration: none;
+  color: var(--black);
+  @include mq {
+    &:hover {
+      transform: rotate(-5deg);
+    }
+  }
+  &::before,
+  &::after {
+    display: block;
+    content: url("../images/corner_squid.svg");
+    background-color: var(--splyellow);
+    width: calc(32px * 0.8);
+    height: calc(32px * 0.8);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+  }
+  &::before {
+    transform: scale(0.8);
+    top: 2px;
+    left: 2px;
+  }
+  &::after {
+    transform: scale(0.8) rotate(180deg);
+    bottom: 2px;
+    right: 2px;
+  }
+  & > span {
+    display: inline-block;
+    width: auto;
+    max-width: 500px;
+    padding: returnRem(5) calc(returnRem(5) + 32px);
+    border: solid 2px #000;
+    position: relative;
+    z-index: 0;
+    font-stretch: condensed;
+    box-sizing: border-box;
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &:nth-of-type(2n) {
+    background-color: var(--section-bg-color);
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 40px);
+  max-width: 980px;
+}
