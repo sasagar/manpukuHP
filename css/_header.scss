@@ -27,6 +27,7 @@ header {
 
     img {
       width: returnRem(48);
+      height: auto;
       @include mq {
         width: returnRem(64);
       }

@@ -20,7 +20,7 @@
                         if (has_post_thumbnail()) :
                             the_post_thumbnail();
                         else:
-                            echo '<img src="' . get_template_directory_uri() . '/images/image_by_rupe.jpg" alt="まんぷく杯イメージ画像">';
+                            echo '<img src="' . mnpk_get_default_image() . '" alt="まんぷく杯イメージ画像">';
                         endif;
                         ?>
                 </figure>

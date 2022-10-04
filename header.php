@@ -7,12 +7,14 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($class); ?>>
+<body <?php body_class(); ?>>
 
     <header>
         <a href="<?php echo home_url('/'); ?>">
             <div class="header-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/ukiwa.png" alt="うきわアイコン">
+                <img src="<?php
+                            echo get_site_icon_url();
+                            ?>" width="512" height="512" alt=" うきわアイコン">
                 <div class="header-title-container">
                     <h1>
                         <span><?php bloginfo('name'); ?></span>
@@ -24,13 +26,13 @@
             </div>
         </a>
         <?php
-            wp_nav_menu(
-                array(
-                    'menu' => 'Global Navigation',
-                    'container' => 'nav',
-                    'container_class' => 'pc-nav',
-                )
-            );
+        wp_nav_menu(
+            array(
+                'menu' => 'Global Navigation',
+                'container' => 'nav',
+                'container_class' => 'pc-nav',
+            )
+        );
         ?>
         <div class="hamburger">
             <i class="fa-solid fa-bars"></i>
@@ -49,7 +51,7 @@
                     'container_class' => 'sp-nav',
                 )
             );
-        ?>
+            ?>
         </div>
     </header>
     <main>
