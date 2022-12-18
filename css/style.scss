@@ -5,6 +5,8 @@
 @use "header";
 @use "footer";
 @use "frontpage";
+@use "keyvisual9";
+@use "keyvisual10";
 @use "news-list";
 @use "mnpk-post";
 @use "singular";
@@ -12,3 +14,5 @@
 @use "page404";
 @use "accordion";
 @use "quotetweet";
+
+@use "lite-yt-embed";

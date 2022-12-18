@@ -55,7 +55,7 @@
                                 $output = '';
                                 if ( $categories ) :
                                     foreach( $categories as $category ) {
-                                        $output .= '<li class="' . $category->slug . '">' . $category->cat_name . '</li>' . $separator;
+                                        $output .= '<li class="' . $category->slug . '"><span>' . $category->cat_name . '</span></li>' . $separator;
                                     }
                                     echo trim( $output, $separator );
                                 endif;

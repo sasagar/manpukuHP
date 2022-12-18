@@ -1,15 +1,17 @@
 <?php get_header(); ?>
-<?php if (mnpk_get_top_message_display()): ?>
+<?php if (mnpk_get_top_message_display()) : ?>
 <div class="top-message">
     <?php echo mnpk_get_top_message_text(); ?>
 </div>
 <?php endif; ?>
-<div class="visual">
-    <div class="lead">
-        <p><span>新たな敵を</span><span>仲間と共に</span><span>迎え撃て!</span></p>
-        <p><span>全イカタコが</span><span>泣いた、</span><span>あの喜びと</span><span>あの感動が</span><span>再び・・・</span></p>
-    </div>
-</div>
+
+<?php
+if (is_user_logged_in()) {
+    get_template_part( 'inc/keyvisual-10' );
+} else {
+    get_template_part( 'inc/keyvisual-9' );
+}
+?>
 <section>
     <div class="container">
         <div class="h2container">
@@ -34,12 +36,9 @@
             <h2><span><span>まんぷく杯の</span><span>PVを</span><span>公開しました</span></span></h2>
         </div>
         <div class="pv">
-            <iframe src="https://www.youtube.com/embed/Ks1CeokgpBo" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/pFYAUwROPiM" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <lite-youtube videoid="hs_WcihfcTQ" playlabel="第9回まんぷく杯PV"></lite-youtube>
+            <lite-youtube videoid="Ks1CeokgpBo" playlabel="第8回まんぷく杯PR"></lite-youtube>
+            <lite-youtube videoid="pFYAUwROPiM" playlabel="第8回まんぷくサーモン杯告知動画"></lite-youtube>
         </div>
     </div>
 </section>

@@ -5,6 +5,26 @@ footer {
   padding: 20px 0 0;
   color: var(--white);
 
+  .container {
+    @include mq {
+      display: flex;
+      .contact {
+        flex: 1;
+      }
+    }
+    nav {
+      margin-top: 2rem;
+      @include mq {
+        flex: 1;
+        margin-top: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+
   a {
     color: var(--splyellow);
     text-decoration: none;
@@ -46,7 +66,7 @@ footer {
     margin: 20px 0 0;
     padding: 5px 20px calc(5px + env(safe-area-inset-bottom));
     background-color: var(--copyright-bg-color);
-    color: var(--white);
+    color: var(--black);
     text-align: center;
   }
 }

@@ -4,7 +4,7 @@
   width: 100%;
   text-align: center;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--red);
   padding: 0.3rem 1.2rem;
   box-sizing: border-box;
 
@@ -16,40 +16,41 @@
 }
 
 .visual {
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: var(--yellow);
-  background-image: url("../images/image_by_rupe.jpg");
-  background-size: contain;
-  background-position: left top;
-  background-repeat: no-repeat;
+  &.kv9 {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--yellow);
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
 
-  @include mq {
-    flex-direction: row;
-    height: 400px;
-    padding: 40px;
-  }
-
-  .lead {
-    font-size: returnRem(20);
-    font-weight: 800;
-    color: var(--white);
-    margin-top: calc(100vw * 833 / 1181);
-    text-align: center;
-    filter: drop-shadow(1px 1px 0 var(--black));
     @include mq {
-      font-size: returnRem(30);
-      margin-top: 0;
-      flex-basis: clamp(200px, calc(100% - 400 / 833 * 1181px), 50%);
-      text-align: left;
+      flex-direction: row;
+      height: 400px;
+      padding: 40px;
     }
-    p {
-      span {
-        display: inline-block;
+
+    .lead {
+      font-size: returnRem(20);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: calc(100vw * 833 / 1181);
+      text-align: center;
+      filter: drop-shadow(1px 1px 0 var(--black));
+      @include mq {
+        font-size: returnRem(30);
+        margin-top: 0;
+        flex-basis: clamp(200px, calc(100% - 400 / 833 * 1181px), 50%);
+        text-align: left;
+      }
+      p {
+        span {
+          display: inline-block;
+        }
       }
     }
   }
@@ -57,17 +58,24 @@
 
 .promotion {
   .pv {
-    iframe {
+    iframe,
+    lite-youtube {
       width: 100%;
       aspect-ratio: 16/9;
+
+      & + lite-youtube {
+        margin-top: 20px;
+      }
     }
   }
   @include mq {
     .pv {
       display: flex;
       gap: 20px;
-      iframe {
-        width: calc(50% - 10px);
+      lite-youtube {
+        & + lite-youtube {
+          margin-top: 0;
+        }
       }
     }
   }

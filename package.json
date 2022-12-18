@@ -1,0 +1,22 @@
+{
+  "name": "manpukuhp",
+  "version": "1.0.0",
+  "description": "manpuku wp theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasagar/manpukuHP.git"
+  },
+  "author": "S4S4P1Y0",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/sasagar/manpukuHP/issues"
+  },
+  "homepage": "https://github.com/sasagar/manpukuHP#readme",
+  "dependencies": {
+    "sass": "^1.57.0"
+  }
+}

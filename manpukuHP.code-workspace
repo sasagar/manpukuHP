@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "dartsass.outputFormat": "minified",
+    "phpcs.executablePath": "/Users/kiyoshi/.composer/vendor/bin/phpcs"
+  }
+}

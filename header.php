@@ -31,6 +31,7 @@
                 'menu' => 'Global Navigation',
                 'container' => 'nav',
                 'container_class' => 'pc-nav',
+                'theme_location' => 'main-menu'
             )
         );
         ?>
@@ -49,6 +50,7 @@
                     'menu' => 'Global Navigation',
                     'container' => 'nav',
                     'container_class' => 'sp-nav',
+                    'theme_location' => 'main-menu'
                 )
             );
             ?>

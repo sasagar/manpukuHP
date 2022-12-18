@@ -1,0 +1,170 @@
+@use "variables" as *;
+.visual {
+  &.kv10 {
+    background-image: url("../images/kv10/12.png");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    @include mq {
+      height: 500px;
+    }
+
+    img {
+      display: block;
+    }
+
+    #character {
+      max-width: 85vw;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+
+      @include mq {
+        max-width: auto;
+        height: 100%;
+      }
+    }
+
+    #smallfry {
+      max-width: 30vw;
+      position: absolute;
+      left: 5%;
+      top: 4%;
+      z-index: 2;
+      animation: 2s ease-in-out 0s infinite alternate smallfry-vertical,
+        20s linear 0s infinite normal smallfry-horizontal;
+
+      @include mq {
+        max-width: 12vw;
+        animation: 2s ease-in-out 0s infinite alternate smallfry-vertical,
+          20s linear 0s infinite normal smallfry-horizontal-pc;
+      }
+    }
+
+    #title {
+      max-width: 400px;
+      width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 33%;
+      z-index: 10;
+
+      @include mq {
+        max-width: none;
+        width: 40vw;
+        left: 5%;
+        top: 5%;
+        transform: translateX(0);
+      }
+    }
+
+    #date {
+      max-width: 70vw;
+      position: absolute;
+      right: 0;
+      bottom: calc(80vw / 831 * 600);
+      z-index: 9;
+
+      @include mq {
+        width: 35vw;
+        left: 20%;
+        top: 30%;
+      }
+    }
+
+    #egg1 {
+      max-width: 20vw;
+      position: absolute;
+      left: -4vw;
+      bottom: 35%;
+      rotate: 90deg;
+      z-index: 1;
+
+      @include mq {
+        rotate: none;
+        left: 50%;
+        bottom: 0;
+      }
+    }
+
+    #egg2 {
+      max-width: 15vw;
+      position: absolute;
+      left: 5vw;
+      bottom: 0;
+      z-index: 1;
+
+      @include mq {
+        max-width: 10vw;
+      }
+    }
+
+    #egg3 {
+      max-width: 20vw;
+      position: absolute;
+      right: 8vw;
+      top: 20%;
+      z-index: 1;
+      animation: 7s ease-in-out 0s infinite normal egg3;
+
+      @include mq {
+        max-width: 25vw;
+        right: auto;
+        left: 30%;
+        top: auto;
+        bottom: 5%;
+      }
+    }
+
+    @keyframes smallfry-vertical {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-30px);
+      }
+    }
+
+    @keyframes smallfry-horizontal {
+      0% {
+        left: -30vw;
+      }
+
+      100% {
+        left: 130vw;
+      }
+    }
+
+    @keyframes smallfry-horizontal-pc {
+      0% {
+        left: -12vw;
+      }
+
+      100% {
+        left: 112vw;
+      }
+    }
+
+    @keyframes egg3 {
+      0% {
+        transform: rotate(0);
+      }
+
+      70% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

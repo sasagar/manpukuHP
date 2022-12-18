@@ -7,10 +7,11 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
-  color: var(--orange);
+  color: var(--red);
 }
 
 main {
@@ -139,4 +140,11 @@ section {
   margin-right: auto;
   width: calc(100% - 40px);
   max-width: 980px;
+}
+
+.wp-block-table.is-style-stripes {
+  td,
+  th {
+    padding: 5px 10px;
+  }
 }

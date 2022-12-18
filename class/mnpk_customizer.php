@@ -5,6 +5,7 @@ class MnpkCustomizer
     {
         add_action('customize_register', array($this, 'mnpk_theme_message_customizer_func'));
         add_action('customize_register', array($this, 'mnpk_default_image_customizer_func'));
+        add_action('customize_register', array($this, 'mnpk_cover_image_customizer_func'));
     }
 
     static function mnpk_theme_message_customizer_func()
@@ -65,6 +66,33 @@ class MnpkCustomizer
             )
         );
     }
+
+    static function mnpk_cover_image_customizer_func()
+    {
+        global $wp_customize;
+        $wp_customize->add_section('mnpk_cover_image', array(
+            'title'     => '【まんぷく杯】カバー画像', // 項目名
+            'description' => 'トップページのカバーとして表示する画像を指定します。',
+            'priority'  => 60, // 優先順位
+        ));
+
+        $wp_customize->add_setting('mnpk_cover_image_file', array(
+            'default'   => '',
+            'type'      => 'option',
+
+        ));
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control(
+                $wp_customize,
+                'mnpk_cover_image_file',
+                array(
+                    'settings'  => 'mnpk_cover_image_file', // settingのキー
+                    'label'     => '表示する画像', // ラベル名
+                    'section'   => 'mnpk_cover_image', // sectionを指定
+                )
+            )
+        );
+    }
 }
 
 new MnpkCustomizer();
@@ -84,5 +112,11 @@ function mnpk_get_top_message_display()
 function mnpk_get_default_image()
 {
     $image = get_option('mnpk_default_image_file');
+    return $image;
+}
+
+function mnpk_get_cover_image()
+{
+    $image = get_option('mnpk_cover_image_file');
     return $image;
 }

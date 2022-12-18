@@ -23,9 +23,9 @@
                     <figure>
                         <?php
                         if (has_post_thumbnail()) :
-                            the_post_thumbnail();
+                            the_post_thumbnail('large');
                         else:
-                            echo '<img src="' . get_template_directory_uri() . '/images/image_by_rupe.jpg" alt="まんぷく杯イメージ画像">';
+                            echo '<img src="' . mnpk_get_default_image()  . '" alt="まんぷく杯イメージ画像">';
                         endif;
                         ?>
                     </figure>
@@ -45,7 +45,7 @@
                                 $output = '';
                                 if ( $categories ) :
                                     foreach( $categories as $category ) {
-                                        $output .= '<li class="' . $category->slug . '">' . $category->cat_name . '</li>' . $separator;
+                                        $output .= '<li class="' . $category->slug . '"><span>' . $category->cat_name . '</span></li>' . $separator;
                                     }
                                     echo trim( $output, $separator );
                                 endif;

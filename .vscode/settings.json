@@ -1,4 +1,14 @@
 {
   "dartsass.outputFormat": "minified",
-  "dartsass.sassBinPath": "/usr/local/bin/sass"
+  "dartsass.sassBinPath": "/usr/local/bin/sass",
+
+  "phpcs.executablePath": "/Users/kiyoshi/.composer/vendor/bin/phpcs",
+  "phpcbf.executablePath": "/Users/kiyoshi/.composer/vendor/bin/phpcbf",
+
+  "phpcs.enable": true,
+  "phpcs.standard": "WordPress",
+  "phpcbf.enable": true,
+  "phpcbf.documentFormattingProvider": true,
+  "phpcbf.onsave": true,
+  "phpcbf.standard": "WordPress"
 }
