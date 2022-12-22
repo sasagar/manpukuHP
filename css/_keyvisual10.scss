@@ -3,8 +3,8 @@
   &.kv10 {
     background-image: url("../images/kv10/12.png");
     background-size: cover;
-    background-position: center;
-    height: 600px;
+    background-position: center bottom;
+    height: calc(600 / 375 * 100vw);
     position: relative;
     overflow: hidden;
 
@@ -39,7 +39,7 @@
         20s linear 0s infinite normal smallfry-horizontal;
 
       @include mq {
-        max-width: 12vw;
+        max-width: 150px;
         animation: 2s ease-in-out 0s infinite alternate smallfry-vertical,
           20s linear 0s infinite normal smallfry-horizontal-pc;
       }
@@ -57,7 +57,8 @@
       z-index: 10;
 
       @include mq {
-        max-width: none;
+        max-width: 600px;
+        min-width: 400px;
         width: 40vw;
         left: 5%;
         top: 5%;
@@ -73,6 +74,7 @@
       z-index: 9;
 
       @include mq {
+        max-width: 600px;
         width: 35vw;
         left: 20%;
         top: 30%;
@@ -106,13 +108,12 @@
       }
     }
 
-    #egg3 {
-      max-width: 20vw;
+    #egg3-container {
       position: absolute;
       right: 8vw;
       top: 20%;
       z-index: 1;
-      animation: 7s ease-in-out 0s infinite normal egg3;
+      animation: 1s ease-in-out 0s infinite alternate egg3-vertical;
 
       @include mq {
         max-width: 25vw;
@@ -120,6 +121,11 @@
         left: 30%;
         top: auto;
         bottom: 5%;
+      }
+
+      #egg3 {
+        max-width: 20vw;
+        animation: 7s ease-in-out 0s infinite normal egg3-rotate;
       }
     }
 
@@ -153,17 +159,27 @@
       }
     }
 
-    @keyframes egg3 {
+    @keyframes egg3-rotate {
       0% {
         transform: rotate(0);
       }
 
-      70% {
+      90% {
         transform: rotate(0);
       }
 
       100% {
         transform: rotate(360deg);
+      }
+    }
+
+    @keyframes egg3-vertical {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-15px);
       }
     }
   }

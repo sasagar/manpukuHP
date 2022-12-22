@@ -6,11 +6,11 @@
 <?php endif; ?>
 
 <?php
-if (is_user_logged_in()) {
+// if (is_user_logged_in()) {
     get_template_part( 'inc/keyvisual-10' );
-} else {
-    get_template_part( 'inc/keyvisual-9' );
-}
+// } else {
+//     get_template_part( 'inc/keyvisual-9' );
+// }
 ?>
 <section>
     <div class="container">
