@@ -26,6 +26,9 @@
         margin-top: 20px;
       }
     }
+    & + .pv {
+      margin-top: 20px;
+    }
   }
   @include mq {
     .pv {
@@ -36,9 +39,6 @@
         & + lite-youtube {
           margin-top: 0;
         }
-      }
-      & + .pv {
-        margin-top: 20px;
       }
     }
   }
