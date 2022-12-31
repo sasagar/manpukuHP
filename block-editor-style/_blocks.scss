@@ -73,6 +73,27 @@
         margin-right: 1rem;
       }
     }
+    .warning {
+      background-color: var(--attention-bg-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      color: var(--attention-accent);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Font Awesome 6 Free";
+        content: "\f071";
+        width: 60px;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+
     .wp-block-quote.tweet {
       background-color: var(--tweet-blue);
       padding: 12px 16px;

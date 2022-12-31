@@ -24,7 +24,7 @@
         </div>
         <p>みんなで楽しめる学校行事の運動会や文化祭のイメージで、運営しております。<br>スプラ２からサーモンランをプレイしていたプレイヤーから、スプラ３から始めた新規のイカちゃん、タコちゃんも気軽に参加してください。<br>詳しくはこちらの<a
                 href="<?php echo get_permalink(28); ?>">大会主旨</a>や<a
-                href="<?php echo get_permalink(36); ?>">ルール</a>をご覧ください。</p>
+                href="<?php echo get_permalink(255); ?>">ルール</a>をご覧ください。</p>
     </div>
 </section>
 
@@ -34,6 +34,9 @@
     <div class="container">
         <div class="h2container">
             <h2><span><span>まんぷく杯の</span><span>PVを</span><span>公開しました</span></span></h2>
+        </div>
+        <div class="pv">
+            <lite-youtube videoid="IJ70VXeMpLQ" playlabel="第10回まんぷく杯PV"></lite-youtube>
         </div>
         <div class="pv">
             <lite-youtube videoid="hs_WcihfcTQ" playlabel="第9回まんぷく杯PV"></lite-youtube>

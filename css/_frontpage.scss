@@ -15,47 +15,6 @@
   }
 }
 
-.visual {
-  &.kv9 {
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--yellow);
-    background-size: contain;
-    background-position: left top;
-    background-repeat: no-repeat;
-
-    @include mq {
-      flex-direction: row;
-      height: 400px;
-      padding: 40px;
-    }
-
-    .lead {
-      font-size: returnRem(20);
-      font-weight: 800;
-      color: var(--white);
-      margin-top: calc(100vw * 833 / 1181);
-      text-align: center;
-      filter: drop-shadow(1px 1px 0 var(--black));
-      @include mq {
-        font-size: returnRem(30);
-        margin-top: 0;
-        flex-basis: clamp(200px, calc(100% - 400 / 833 * 1181px), 50%);
-        text-align: left;
-      }
-      p {
-        span {
-          display: inline-block;
-        }
-      }
-    }
-  }
-}
-
 .promotion {
   .pv {
     iframe,
@@ -71,11 +30,15 @@
   @include mq {
     .pv {
       display: flex;
+      justify-content: center;
       gap: 20px;
       lite-youtube {
         & + lite-youtube {
           margin-top: 0;
         }
+      }
+      & + .pv {
+        margin-top: 20px;
       }
     }
   }

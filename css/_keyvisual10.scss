@@ -53,7 +53,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 33%;
+      top: 25%;
       z-index: 10;
 
       @include mq {
@@ -70,7 +70,7 @@
       max-width: 70vw;
       position: absolute;
       right: 0;
-      bottom: calc(80vw / 831 * 600);
+      top: calc(80vw / 831 * 600);
       z-index: 9;
 
       @include mq {
@@ -126,6 +126,68 @@
       #egg3 {
         max-width: 20vw;
         animation: 7s ease-in-out 0s infinite normal egg3-rotate;
+      }
+    }
+
+    #buttons {
+      position: absolute;
+      bottom: 38%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      z-index: 5;
+
+      @include mq {
+        justify-content: flex-start;
+        left: 7%;
+        bottom: 20%;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        background-color: var(--key-color-10th);
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        height: 44px;
+        border-radius: 30px;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        @include mq {
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+          }
+
+          &:hover {
+            &::before {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+          }
+
+          &:active {
+            &::before {
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        & + a {
+          margin-left: 10px;
+        }
       }
     }
 

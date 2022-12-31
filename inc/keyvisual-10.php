@@ -7,4 +7,8 @@
     <img id="egg2" src="<?php echo get_template_directory_uri() . '/images/kv10/7.png' ?>" aria-hidden="true">
     <span id="egg3-container"><img id="egg3" src="<?php echo get_template_directory_uri() . '/images/kv10/8.png' ?>"
             aria-hidden="true"></span>
+    <div id="buttons">
+        <a href="<?php echo get_permalink(306); ?>">参加方法</a>
+        <a href="<?php echo get_permalink(255); ?>">ルール</a>
+    </div>
 </div>
