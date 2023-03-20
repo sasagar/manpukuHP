@@ -8,16 +8,20 @@ footer {
   .container {
     @include mq {
       display: flex;
+
       .contact {
         flex: 1;
       }
     }
+
     nav {
       margin-top: 2rem;
+
       @include mq {
         flex: 1;
         margin-top: 0;
       }
+
       ul {
         list-style: none;
         padding: 0;
@@ -55,6 +59,7 @@ footer {
         .sns {
           background-color: var(--orange);
         }
+
         span {
           color: var(--orange);
         }
@@ -83,7 +88,7 @@ footer {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: var(--key-color-10th);
+  background: var(--key-color-11th);
   border-radius: 50%;
 
   span {
@@ -114,12 +119,15 @@ footer {
     opacity: 0;
     transform: translateY(7px) rotate(45deg);
   }
+
   25% {
     opacity: 0.75;
   }
+
   75% {
     opacity: 0.75;
   }
+
   100% {
     opacity: 0;
     transform: translateY(-3px) rotate(45deg);

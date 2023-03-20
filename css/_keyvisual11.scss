@@ -1,0 +1,255 @@
+@use "variables" as *;
+
+.visual {
+    &.kv11 {
+        background-image: url('../images/kv11/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: calc(600 / 375 * 100vw);
+        position: relative;
+        overflow: hidden;
+
+        @include mq {
+            height: 500px;
+        }
+
+        img {
+            display: block;
+            max-width: none;
+        }
+
+        #sakura-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+            z-index: 1;
+            animation: 8s ease-in-out 0s infinite alternate sakura-bg-kf;
+            transform-origin: top left;
+
+            @include mq {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        #chara {
+            position: absolute;
+            bottom: -10px;
+            right: -20%;
+            height: 80%;
+            z-index: 2;
+
+            @include mq {
+                left: 250px;
+                right: auto;
+                height: 85%;
+            }
+        }
+
+        #sakura-shadow {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            height: 60%;
+            z-index: 3;
+            display: none;
+        }
+
+        #sakura-front {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 120%;
+            z-index: 4;
+            animation: 7s ease-in-out 0s infinite alternate sakura-front-kf;
+            transform-origin: top left;
+
+            @include mq {
+                top: -120px;
+                height: 60%;
+                width: auto;
+            }
+        }
+
+        #sakura-front-front {
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 100%;
+            z-index: 5;
+            animation: 9s ease-in-out 0s infinite alternate sakura-front-front-kf;
+            transform-origin: top left;
+
+            @include mq {
+                bottom: -50px;
+                height: 75%;
+                width: auto;
+            }
+        }
+
+        #blossom {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            height: 120%;
+            z-index: 6;
+            animation: 15s linear 0s infinite blossom-kf;
+        }
+
+        #kv11_title {
+            position: absolute;
+            top: 38%;
+            left: 2%;
+            width: 55vw;
+            z-index: 7;
+
+            @include mq {
+                top: 10%;
+                left: auto;
+                right: 10%;
+                width: 30vw;
+            }
+        }
+
+        #kv11_date {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            width: 50vw;
+            z-index: 8;
+            text-align: center;
+            color: darken(#ffa5cb, 50%);
+            filter: drop-shadow(0 0 2px #fff);
+
+            @include mq {
+                top: 55%;
+                right: 10%;
+                left: auto;
+                width: 30vw;
+            }
+        }
+
+        #buttons {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            z-index: 10;
+
+            @include mq {
+                justify-content: center;
+                flex-direction: row-reverse;
+                right: 10%;
+                bottom: 20%;
+                width: 30vw;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                background-color: var(--key-color-11th);
+                border: 2px solid rgba(0, 0, 0, 0.2);
+                height: 44px;
+                border-radius: 30px;
+                position: relative;
+                box-sizing: border-box;
+                overflow: hidden;
+
+                @include mq {
+                    &::before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        box-sizing: border-box;
+                    }
+
+                    &:hover {
+                        &::before {
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+
+                    &:active {
+                        &::before {
+                            background-color: rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                }
+
+                &+a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes sakura-bg-kf {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes sakura-front-kf {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    40% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes sakura-front-front-kf {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes blossom-kf {
+    0% {
+        transform: translateX(-100%) translateY(-150px);
+    }
+
+    40% {
+        transform: translateX(calc(40vw - 20%)) translateY(40px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 100%)) translateY(200px)rotate(-5deg);
+    }
+}

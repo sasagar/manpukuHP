@@ -12,13 +12,11 @@
     <header>
         <a href="<?php echo home_url('/'); ?>">
             <div class="header-container">
-                <img src="<?php
-                            echo get_site_icon_url();
-                            ?>" width="512" height="512" alt=" うきわアイコン">
+                <h1 class="new">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/rogo_inc_color.png" alt="まんぷく杯"
+                        class="new_logo">
+                </h1>
                 <div class="header-title-container">
-                    <h1>
-                        <span><?php bloginfo('name'); ?></span>
-                    </h1>
                     <h2>
                         <span><?php bloginfo('description'); ?></span>
                     </h2>

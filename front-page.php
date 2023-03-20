@@ -7,10 +7,11 @@
 
 <?php
 // if (is_user_logged_in()) {
-    get_template_part( 'inc/keyvisual-10' );
+//     get_template_part( 'inc/keyvisual-11' );
 // } else {
-//     get_template_part( 'inc/keyvisual-9' );
+//     get_template_part( 'inc/keyvisual-10' );
 // }
+    get_template_part( 'inc/keyvisual-11' );
 ?>
 <section>
     <div class="container">
