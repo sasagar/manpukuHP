@@ -138,8 +138,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
+            flex-direction: row-reverse;
             z-index: 10;
+            gap: 10px;
 
             @include mq {
                 justify-content: center;
@@ -190,9 +191,9 @@
                     }
                 }
 
-                &+a {
-                    margin-right: 10px;
-                }
+                // &+a {
+                //     margin-right: 10px;
+                // }
             }
         }
     }
