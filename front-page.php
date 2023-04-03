@@ -37,6 +37,7 @@
             <h2><span><span>まんぷく杯の</span><span>PVを</span><span>公開しました</span></span></h2>
         </div>
         <div class="pv">
+            <lite-youtube videoid="Uk1clHS07_k" playlabel="第11回まんぷく杯フェス告知PV"></lite-youtube>
             <lite-youtube videoid="d2OvZcxsV8g" playlabel="第11回まんぷく杯公式PV"></lite-youtube>
         </div>
         <div class="pv">
