@@ -291,7 +291,7 @@ async function drawing() {
 
             switch (checkValue) {
                 case "01":
-                    img_src = '/wp-content/themes/manpuku/images/namecard_base_11/kill.png';
+                    img_src = '/wp-content/themes/manpuku/images/namecard_base_11/kill_g.png';
                     futa_color = "#000000";
                     name_color = "#000000";
                     team_color = "#000000";
@@ -323,7 +323,7 @@ async function drawing() {
                     // alert("テンタクルズ")
                     break;
                 case "03":
-                    img_src = '/wp-content/themes/manpuku/images/namecard_base_11/balance.png';
+                    img_src = '/wp-content/themes/manpuku/images/namecard_base_11/balance_g.png';
                     futa_color = "#ffffff";
                     name_color = "#ffffff";
                     team_color = "#000000";
