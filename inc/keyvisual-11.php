@@ -13,7 +13,11 @@
         alt="第11回 まんぷく杯">
     <h2 id="kv11_date">2023/04/22 (土) 21:00開催！</h2>
     <div id="buttons">
+        <?php if (get_post_status ( 511 ) == 'publish') :?>
+        <a href="<?php echo get_permalink(511); ?>">結果発表はこちら！</a>
+        <?php else: ?>
         <a href="<?php echo get_permalink(402); ?>">参加方法</a>
         <a href="<?php echo get_permalink(390); ?>">ルール</a>
+        <?php endif; ?>
     </div>
 </div>
