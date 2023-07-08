@@ -5,11 +5,11 @@
         <h2 id="kv12_date"><img src="<?php echo get_template_directory_uri() . '/images/kv12/manpukucup_12_date.png' ?>"
                 alt="2023.07.29(土) 21:00 START!"></h2>
         <div id="buttons">
-            <?php if (get_post_status ( 511 ) == 'publish') :?>
-            <a href="<?php echo get_permalink(511); ?>">結果発表はこちら！</a>
+            <?php if (get_post_status ( 575 ) == 'publish') :?>
+            <a href="<?php echo get_permalink(575); ?>">結果発表はこちら！</a>
             <?php else: ?>
-            <a href="<?php echo get_permalink(402); ?>">参加方法</a>
-            <a href="<?php echo get_permalink(390); ?>">ルール</a>
+            <a href="<?php echo get_permalink(572); ?>">参加方法</a>
+            <a href="<?php echo get_permalink(537); ?>">ルール</a>
             <?php endif; ?>
         </div>
     </div>
