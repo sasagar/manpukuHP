@@ -6,12 +6,12 @@
 <?php endif; ?>
 
 <?php
-if (is_user_logged_in()) {
+// if (is_user_logged_in()) {
+//     get_template_part( 'inc/keyvisual-12' );
+// } else {
+//     get_template_part( 'inc/keyvisual-11' );
+// }
     get_template_part( 'inc/keyvisual-12' );
-} else {
-    get_template_part( 'inc/keyvisual-11' );
-}
-    // get_template_part( 'inc/keyvisual-11' );
 ?>
 <section>
     <div class="container">
@@ -25,7 +25,7 @@ if (is_user_logged_in()) {
         </div>
         <p>みんなで楽しめる学校行事の運動会や文化祭のイメージで、運営しております。<br>スプラ２からサーモンランをプレイしていたプレイヤーから、スプラ３から始めた新規のイカちゃん、タコちゃんも気軽に参加してください。<br>詳しくはこちらの<a
                 href="<?php echo get_permalink(28); ?>">大会主旨</a>や<a
-                href="<?php echo get_permalink(390); ?>">ルール</a>をご覧ください。</p>
+                href="<?php echo get_permalink(537); ?>">ルール</a>をご覧ください。</p>
     </div>
 </section>
 
