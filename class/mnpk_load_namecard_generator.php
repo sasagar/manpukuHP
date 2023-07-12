@@ -13,6 +13,9 @@ class MnpkLoadNameCardGenerator
         if ( is_page( 'namecard-generator-11th' ) ) {
             wp_enqueue_script('mnpk-namecard-draw-11', get_template_directory_uri() . '/js/namecard-draw-11.js', array(), date_i18n('YmdHis', filemtime(get_template_directory() . '/js/namecard-draw-11.js')), true);
         }
+        if ( is_page( 'namecard-generator-12th' ) ) {
+            wp_enqueue_script('mnpk-namecard-draw-12', get_template_directory_uri() . '/js/namecard-draw-12.js', array(), date_i18n('YmdHis', filemtime(get_template_directory() . '/js/namecard-draw-12.js')), true);
+        }
     }
 
 }

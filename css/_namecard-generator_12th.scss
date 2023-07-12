@@ -46,19 +46,19 @@
 
         #Umi:checked+label {
           &::before {
-            filter: hue-rotate(315deg);
+            filter: hue-rotate(250deg);
           }
         }
 
         #Hanabi:checked+label {
           &::before {
-            filter: hue-rotate(100deg);
+            filter: hue-rotate(280deg);
           }
         }
 
         #BBQ:checked+label {
           &::before {
-            filter: hue-rotate(230deg);
+            filter: hue-rotate(100deg);
           }
         }
       }

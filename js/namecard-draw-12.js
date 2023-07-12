@@ -194,7 +194,7 @@ function load_page() {
         /// フォント読み込み成功
         /// body要素全体にそれを適用する
         document.fonts.add(loadedFace);
-        document.getElementById('namecard-generator-11').style.fontFamily = 'Splatfont2, Splatfont2Common, Splatfont2Hira, Splatfont2JPLv1, Splatfont2JPLv2, Splatfont2Cjk';
+        document.getElementById('namecard-generator-12').style.fontFamily = 'Splatfont2, Splatfont2Common, Splatfont2Hira, Splatfont2JPLv1, Splatfont2JPLv2, Splatfont2Cjk';
         drawing();
         tw_drawing();
     }).catch(function (e) {
