@@ -421,7 +421,7 @@ async function drawing() {
         var y = 55;
         ctx.fillText(text, x, y);
 
-        var text = '第11回 まんぷく杯';
+        var text = '第12回 まんぷく杯';
         //文字のスタイルを指定
         ctx.font = '30px Splatfont2, Splatfont2Common, Splatfont2Hira, Splatfont2JPLv1, Splatfont2JPLv2, Splatfont2Cjk';
         ctx.fillStyle = event_color;
@@ -447,7 +447,7 @@ async function drawing() {
 
     });
 
-    badge.src = '/wp-content/themes/manpuku/images/namecard_base_12/tatsutatsuta.png';
+    badge.src = '/wp-content/themes/manpuku/images/namecard_base_12/kurumaritiger.png';
     const tempuracanvas = document.getElementById("canvas_badge");
     const ctxb = tempuracanvas.getContext("2d");
     badge.onload = async function () {
@@ -646,7 +646,7 @@ async function tw_drawing() {
         var y = 100;
         ctx.fillText(text, x, y);
 
-        var text = '第11回 まんぷく杯';
+        var text = '第12回 まんぷく杯';
         //文字のスタイルを指定
         ctx.font = '70px Splatfont2, Splatfont2Common, Splatfont2Hira, Splatfont2JPLv1, Splatfont2JPLv2, Splatfont2Cjk';
         ctx.fillStyle = event_color;
@@ -672,7 +672,7 @@ async function tw_drawing() {
 
     });
 
-    badge.src = '/wp-content/themes/manpuku/images/namecard_base_12/tatsutatsuta.png';
+    badge.src = '/wp-content/themes/manpuku/images/namecard_base_12/kurumaritiger.png';
     const tempuracanvas = document.getElementById("canvas_tw_badge");
     const ctxb = tempuracanvas.getContext("2d");
     badge.onload = async function () {
