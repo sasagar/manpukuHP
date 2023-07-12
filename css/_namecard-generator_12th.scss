@@ -44,19 +44,19 @@
           }
         }
 
-        #Kill:checked+label {
+        #Umi:checked+label {
           &::before {
             filter: hue-rotate(315deg);
           }
         }
 
-        #Delivery:checked+label {
+        #Hanabi:checked+label {
           &::before {
             filter: hue-rotate(100deg);
           }
         }
 
-        #Balance:checked+label {
+        #BBQ:checked+label {
           &::before {
             filter: hue-rotate(230deg);
           }
