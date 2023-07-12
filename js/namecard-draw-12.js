@@ -328,13 +328,13 @@ async function drawing() {
                     name_color = "#000000";
                     team_color = "#000000";
                     event_color = "#000000";
-                    name_shadow = false;
+                    name_shadow = true;
                     name_shadow_color = "#ffffff";
-                    team_shadow = false;
+                    team_shadow = true;
                     team_shadow_color = "#ffffff";
                     futatsuna_shadow = true;
                     futatsuna_shadow_color = "#ffffff";
-                    event_shadow = false;
+                    event_shadow = true;
                     event_shadow_color = "#ffffff";
                     // alert("すりみ連合")
                     break;
@@ -553,13 +553,13 @@ async function tw_drawing() {
                     name_color = "#000000";
                     team_color = "#000000";
                     event_color = "#000000";
-                    name_shadow = false;
+                    name_shadow = true;
                     name_shadow_color = "#ffffff";
-                    team_shadow = false;
+                    team_shadow = true;
                     team_shadow_color = "#ffffff";
                     futatsuna_shadow = true;
                     futatsuna_shadow_color = "#ffffff";
-                    event_shadow = false;
+                    event_shadow = true;
                     event_shadow_color = "#ffffff";
                     // alert("すりみ連合")
                     break;
