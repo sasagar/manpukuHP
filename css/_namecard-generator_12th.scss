@@ -1,0 +1,223 @@
+@use "variables" as *;
+
+#namecard-generator-12 {
+  .menu {
+    section {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &:nth-of-type(2n) {
+        background-color: transparent;
+      }
+
+      h2 {
+        transform: rotate(-2deg);
+      }
+
+      .radio {
+        input[type="radio"] {
+          display: none;
+          cursor: pointer;
+
+          &+label {
+            display: flex;
+            align-items: center;
+            font-size: returnRem(30);
+            line-height: 2;
+            cursor: pointer;
+
+            &::before {
+              display: block;
+              content: "";
+              background-image: url("../images/namecard_base_10/6.png");
+              height: 44px;
+              width: 44px;
+              background-size: contain;
+              margin-right: 10px;
+              filter: grayscale(100%);
+              cursor: pointer;
+            }
+          }
+
+          &:checked+label {
+            text-decoration: underline;
+          }
+        }
+
+        #Kill:checked+label {
+          &::before {
+            filter: hue-rotate(315deg);
+          }
+        }
+
+        #Delivery:checked+label {
+          &::before {
+            filter: hue-rotate(100deg);
+          }
+        }
+
+        #Balance:checked+label {
+          &::before {
+            filter: hue-rotate(230deg);
+          }
+        }
+      }
+
+      input[type="text"] {
+        margin-top: 10px;
+        font-size: returnRem(24);
+        padding: returnRem(5);
+
+        &::placeholder {
+          color: var(--lightgray);
+        }
+      }
+
+      select {
+        font-size: returnRem(24);
+      }
+
+      .tenpurabit {
+        width: 150px;
+        height: auto;
+      }
+
+      /* === ボタンを表示するエリア ============================== */
+      .switchArea {
+        line-height: 50px;
+        /* 1行の高さ          */
+        letter-spacing: 0;
+        /* 文字間             */
+        text-align: center;
+        /* 文字位置は中央     */
+        font-size: 27px;
+        /* 文字サイズ         */
+        margin-top: 20px;
+
+        position: relative;
+        /* 親要素が基点       */
+        width: 130px;
+        /* ボタンの横幅       */
+        background: #fff;
+        /* デフォルト背景色   */
+
+        /* === チェックボックス ==================================== */
+        input[type="checkbox"] {
+          display: none;
+
+          /* チェックボックス非表示 */
+          /* === チェックボックスのラベル（ONのとき） ================ */
+          &:checked {
+            &+label {
+              border-color: #78bd78;
+              /* 選択タブの枠線     */
+
+              /* === 表示する文字（ONのとき） ============================ */
+              span:after {
+                content: "ON";
+                /* 表示する文字       */
+                padding: 0 36px 0 0;
+                /* 表示する位置       */
+                color: #78bd78;
+                /* 文字色             */
+              }
+
+              /* === 丸部分のSTYLE（ONのとき） =========================== */
+              ~#swImg {
+                transform: translateX(80px);
+                /* 丸も右へ移動       */
+                background: #78bd78;
+                /* カーソルタブの背景 */
+              }
+            }
+          }
+        }
+
+        /* === チェックボックスのラベル（標準） ==================== */
+        label {
+          display: block;
+          /* ボックス要素に変更 */
+          box-sizing: border-box;
+          /* 枠線を含んだサイズ */
+          height: 50px;
+          /* ボタンの高さ       */
+          border: 2px solid #999999;
+          /* 未選択タブのの枠線 */
+          border-radius: 30px;
+          /* 角丸               */
+
+          /* === 表示する文字（標準） ================================ */
+          span::after {
+            content: "OFF";
+            /* 表示する文字       */
+            padding: 0 0 0 36px;
+            /* 表示する位置       */
+            color: #999999;
+            /* 文字色             */
+          }
+        }
+
+        /* === 丸部分のSTYLE（標準） =============================== */
+        #swImg {
+          position: absolute;
+          /* 親要素からの相対位置*/
+          width: 42px;
+          /* 丸の横幅           */
+          height: 42px;
+          /* 丸の高さ           */
+          background: #999999;
+          /* カーソルタブの背景 */
+          top: 4px;
+          /* 親要素からの位置   */
+          left: 4px;
+          /* 親要素からの位置   */
+          border-radius: 26px;
+          /* 角丸               */
+          transition: 0.2s;
+          /* 滑らか変化         */
+        }
+      }
+    }
+  }
+
+  .namecard-container,
+  .namecard-tw-container {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 7 / 2;
+
+    canvas {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 700px;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 7 / 2;
+      z-index: 1;
+    }
+  }
+
+  .namecard-tw-container {
+    width: 1500px;
+    max-width: 100%;
+    aspect-ratio: 3 / 1;
+
+    img {
+      width: 1500px;
+      max-width: 100%;
+      aspect-ratio: 3 / 1;
+    }
+  }
+}
