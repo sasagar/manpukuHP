@@ -307,7 +307,7 @@ async function drawing() {
                     // alert("シオカラーズ")
                     break;
                 case "02":
-                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12hanabi.png';
+                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12/hanabi.png';
                     futa_color = "#ffffff";
                     name_color = "#ffffff";
                     team_color = "#ffffff";
