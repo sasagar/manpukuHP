@@ -307,7 +307,7 @@ async function drawing() {
                     // alert("シオカラーズ")
                     break;
                 case "02":
-                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12/hanabi.png';
+                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12/hanabi_g@2x.png';
                     futa_color = "#ffffff";
                     name_color = "#ffffff";
                     team_color = "#ffffff";
@@ -532,7 +532,7 @@ async function tw_drawing() {
                     // alert("シオカラーズ")
                     break;
                 case "02":
-                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12/hanabi_tw.png';
+                    img_src = '/wp-content/themes/manpuku/images/namecard_base_12/hanabi_tw_g@2x.png';
                     futa_color = "#ffffff";
                     name_color = "#ffffff";
                     team_color = "#ffffff";
